@@ -1,8 +1,20 @@
+// @flow
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Number } from 'core-js';
 
-class App extends Component {
+type Props = {};
+
+const Hello = () => {
+  return <h1>Hello</h1>;
+};
+class App extends Component<Props> {
+  state = {
+    counter: 0
+  };
+
   render() {
     return (
       <div className="App">
@@ -13,6 +25,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Hello />
       </div>
     );
   }
